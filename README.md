@@ -1,8 +1,14 @@
-# React + Vite
+## Meshwall
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это простой генератор обоев сетчатого градиента на случай если вам вдруг понадобилось
 
-Currently, two official plugins are available:
+### Как пользоваться
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Заходите на сайт meshwall.vercel.app
+2. Кликаете на кнопку "Shuffle" посередине, пока картинка не станет радовать глаз
+3. Нажимаете "Скопировать", если нужен код CSS, или "Скачать" в формате .png
+4. Done!
+
+Картинка сохраняется с разрешением экрана вашего девайса - ни больше, ни меньше.
+
+![Интерфейс meshwall](./meshwall-preview.jpg)
