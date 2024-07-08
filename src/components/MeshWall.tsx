@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { getRandomNumber as rn } from "../helpers";
 
-const MeshWall = forwardRef(function MeshWall(props, ref) {
+const MeshWall = forwardRef<HTMLDivElement>(function MeshWall(props, ref) {
   return (
     <div
       ref={ref}

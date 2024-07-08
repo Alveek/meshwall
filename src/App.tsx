@@ -7,15 +7,17 @@ import MeshWall from "./components/MeshWall";
 import Button from "./components/Button";
 
 const App = () => {
-  const imageContainerRef = useRef(null);
+  const imageContainerRef = useRef<HTMLDivElement>(null);
   const [screenWidth] = useState(window.screen.width);
   const [screenHeight] = useState(window.screen.height);
+
+  // const state here just for triggering updage MeshWall component, when a user clicks on 'shuffle' button, state updates count + 1, which triggers useMemo hook to update component with gradient
   const [state, setState] = useState(1);
   const [copied, setCopied] = useState(false);
   const [cssStyles, setCssStyles] = useState("");
 
   useEffect(() => {
-    if (imageContainerRef.current) {
+    if (imageContainerRef.current instanceof Node) {
       setCssStyles(`.meshwall {
         background-color: ${imageContainerRef.current.style.backgroundColor};
         background-image: ${imageContainerRef.current.style.backgroundImage};
@@ -41,7 +43,7 @@ const App = () => {
 
   const handleDownload = () => {
     domtoimage
-      .toPng(imageContainerRef.current, options)
+      .toPng(imageContainerRef.current!, options)
       .then((dataUrl) => {
         const link = document.createElement("a");
         link.download = "meshwall.png";
