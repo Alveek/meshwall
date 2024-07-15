@@ -2,7 +2,7 @@ import "./App.css";
 import domtoimage from "dom-to-image";
 import { useRef, useState, useMemo, useEffect } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { Download, Shuffle, Copy } from "lucide-react";
+import { Download, Shuffle, Copy, Github } from "lucide-react";
 import MeshWall from "./components/MeshWall";
 import Button from "./components/Button";
 
@@ -21,7 +21,7 @@ const App = () => {
       setCssStyles(`.meshwall {
         background-color: ${imageContainerRef.current.style.backgroundColor};
         background-image: ${imageContainerRef.current.style.backgroundImage};
-  }`);
+      }`);
     }
   }, [state]);
 
@@ -58,6 +58,14 @@ const App = () => {
   return (
     <main className="main">
       <h1 className="logo gradient-text">Meshwall</h1>
+      <a
+        className="github-link"
+        href="https://github.com/Alveek/meshwall"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <Github color="white" />
+      </a>
 
       {state && meshWallComponent}
 

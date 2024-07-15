@@ -18,7 +18,7 @@ const MeshWall = forwardRef<HTMLDivElement>(function MeshWall(props, ref) {
         radial-gradient(at ${rn(10, 90)}% ${rn(10, 90)}%, hsla(${rn(10, 340)}, ${rn(60, 90)}%, ${rn(60, 90)}%, 1) 0px, transparent ${rn(48, 51)}%)
          `,
       }}
-    ></div>
+    />
   );
 });
 
